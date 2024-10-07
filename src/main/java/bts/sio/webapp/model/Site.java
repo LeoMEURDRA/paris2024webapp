@@ -1,14 +1,14 @@
 package bts.sio.webapp.model;
 
-
 import lombok.Data;
 
-import java.util.List;
-
 @Data
-public class Sport {
+public class Site {
+
     private Integer id;
     private String nom;
-    private String descriptif;
-    private List<Site> site;
+    private String rue;
+    private Integer code_postal;
+    private String ville;
+
 }

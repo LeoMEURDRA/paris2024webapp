@@ -46,6 +46,7 @@
 					<tr>
 						<th>Nom</th>
 						<th>Descriptif</th>
+						<th>Site</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -56,6 +57,7 @@
 					<tr th:each="sport: ${sport}">
 						<td><span th:text="${sport.nom}"> Nom </span></td>
 						<td><span th:text="${sport.descriptif}"> Descriptif </span></td>
+						<td><li th:each="site : ${sport.site}" th:text="${site.nom}">Nom Site</li></td>
 						<td>
 							<a th:href="@{/updateSport/{id}(id=${sport.id})}"><button class="btn btn-info">Modifier</button></a>
 							<a th:href="@{/deleteSport/{id}(id=${sport.id})}"><button class="btn btn-danger">Supprimer</button></a>
